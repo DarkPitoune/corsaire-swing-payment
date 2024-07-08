@@ -1,4 +1,4 @@
-package com.sumup.sdksampleapp;
+package com.sumup.corsaireduswing;
 
 import android.app.Application;
 import com.sumup.merchant.reader.api.SumUpState;

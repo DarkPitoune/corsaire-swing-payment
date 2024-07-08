@@ -1,113 +1,222 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/container"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".MainActivity"
-  android:orientation="vertical"
-  android:padding="16dp"
-  android:gravity="center">
-
-
-    <Button
-      android:id="@+id/button_login"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Login"
-      android:layout_gravity="center"/>
-
-    <Button
-      android:id="@+id/button_log_merchant"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Show Logged In Merchant"/>
-
-    <Button
-      android:id="@+id/button_charge"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Charge"
-      android:layout_gravity="center"/>
-
-    <Button
-      android:id="@+id/button_card_reader_page"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Card Reader Page"
-      android:layout_gravity="center"/>
-
-    <Button
-      android:id="@+id/button_prepare_card_terminal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Prepare Card Terminal"
-      android:layout_gravity="center"/>
-
-    <Button
-      android:id="@+id/button_logout"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="16dp"
-      android:text="Log out"
-      android:layout_gravity="center"/>
-
-  <ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
     <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="vertical">
-
-     <TextView
-       android:id="@+id/result"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:textSize="18sp"
-       android:padding="8dp"
-       tools:text="Result code: -"
-       android:layout_gravity="center"/>
-
-      <TextView
-        android:id="@+id/result_msg"
+        android:id="@+id/pay_buttons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="8dp"
-        tools:text="Message: -"
-        android:layout_gravity="center"/>
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-      <TextView
-        android:id="@+id/tx_code"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Sélectionnez..."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Patientez..."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="Payez sans contact !"/>
+        <LinearLayout
+            android:id="@+id/pay_buttons_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/button_charge_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_margin="10dp"
+                android:textSize="100sp"
+                android:text="2€" />
+
+            <Button
+                android:id="@+id/button_charge_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_margin="10dp"
+                android:textSize="100sp"
+                android:text="5€" />
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pay_buttons_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_charge_10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="8dp"
-        tools:text="Transaction Code: -"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_margin="10dp"
+        android:textSize="75sp"
+        android:text="10€" />
 
-      <TextView
-        android:id="@+id/receipt_sent"
+        <Button
+            android:id="@+id/button_charge_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="16dp"
+            android:text="20€"
+            android:textSize="75sp" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/button_charge_50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="16dp"
+            android:text="50€"
+            android:textSize="75sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/open_debug"
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:text="admin"/>
+
+    <LinearLayout
+        android:id="@+id/debug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/button_log_merchant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="8dp"
-        tools:text="Receipt sent : -"/>
+        android:layout_marginBottom="16dp"
+        android:text="Show Logged In Merchant" />
 
-      <TextView
-        android:id="@+id/tx_info"
+    <Button
+        android:id="@+id/button_card_reader_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:padding="8dp"
-        tools:text="Transaction Info : -"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="Card Reader Page" />
+
+    <Button
+        android:id="@+id/button_prepare_card_terminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="Prepare Card Terminal" />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="Log out" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:text="Result code: -" />
+
+        <TextView
+            android:id="@+id/result_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:text="Message: -" />
+
+        <TextView
+            android:id="@+id/tx_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:text="Transaction Code: -" />
+
+        <TextView
+            android:id="@+id/receipt_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:text="Receipt sent : -" />
+
+        <TextView
+            android:id="@+id/tx_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="18sp"
+            tools:text="Transaction Info : -" />
 
     </LinearLayout>
-  </ScrollView>
+    </LinearLayout>
 </LinearLayout>
